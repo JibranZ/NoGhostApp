@@ -9,16 +9,18 @@ export default function Navbar () {
 
 			<div className={` ${styles.navbarName} `} > 
 				<p> 
-					Friendship	
+					NoGhost	
 				</p> 
 			</div> 
 
 
 			<div className={` ${styles.navbarContents} `} > 
+	{/*
 			  <a href="#home" >Home</a>
 			  <a href="#about" >About</a>
 			  <a href="#services" >Services</a>
 			  <a href="#contact" >Contact</a>
+	*/}`
 			</div> 
 
 
