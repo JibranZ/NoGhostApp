@@ -6,7 +6,34 @@ body {
   height: 100vh; /* Makes sure it covers the full viewport height */
   margin: 0; /* Removes default body margin */
   font-family: "Montserrat", sans-serif;
+} 
+ 
+ 
+ 
+/* css reset */ 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; 
 }
+
+
+
+
+:root {
+  --color1: #111720;
+  --color2: #1A2131;
+  --color3: #ecf0f1;
+  --color4: #2c3e50;
+  --containerWidth: 80%;
+  --borderWidth: 2px;
+  --textSize1: 18px;
+  --textSize2: 24px;
+  --brdRad1: 10px;
+  --fontFamily1: 'Montserrat', sans-serif;
+
 
 h1 {
   color: white;
@@ -117,4 +144,6 @@ form {
   color: blue;
   margin-top: 20px;
   text-decoration: none;
+=======
+
 }
