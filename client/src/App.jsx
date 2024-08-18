@@ -17,8 +17,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={user ? <Chat /> : <Home />} />
-        <Route path="/register" element={user ? <Chat /> : <Register />} />
-        <Route path="/login" element={user ? <Chat /> : <Login />} />
+        <Route path="/register" element={user ? <Transition/> : <Register />} />
+        <Route path="/login" element={user ? <Waiting/> : <Login />} />
         <Route path="*" element={<Navigate to={"/"} />} />
 	  	<Route path="/transition" element={<Transition />} />  
 	  	<Route path="/waiting" element={<Waiting />} />

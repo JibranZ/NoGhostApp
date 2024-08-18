@@ -12,6 +12,22 @@ function WaitingScreen() {
 
   const [messageIndex, setMessageIndex] = useState(0);
 
+  const [completed, setComplete] = useState(false);
+
+
+  const navigate = useNavigate();
+
+  const goToChat = () => {
+		navigate('/chat'); 
+  };
+
+  // Handle showing and hiding questions
+  useEffect(() => {
+    if (completed) {
+	  goToChat();
+    }
+  }, [completed]);
+
 
 	const handleConnect = async () => {
         // Basic validation
@@ -49,7 +65,7 @@ function WaitingScreen() {
   useEffect(() => {
     const timer = setInterval(() => {
       setMessageIndex(prevIndex =>
-        prevIndex === messages.length - 1 ? 0 : prevIndex + 1
+        prevIndex === messages.length - 1 ? setComplete(true) : prevIndex + 1
       );
 	  handleConnect();
     }, 3000);
