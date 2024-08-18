@@ -1,8 +1,15 @@
 import { useState } from 'react'
 import styles from './Home.module.css'
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Headline () {
+
+	const navigate = useNavigate();
+
+	const goToTransition = () => {
+		navigate('/transition'); 
+	};
+
 	return (
 
 		<div className={` ${styles.container} ${styles.headline}`} > 
@@ -28,7 +35,7 @@ export default function Headline () {
 				>  Understand, Connect, and Grow—Together. 
 				</h4> 
 				
-				<button  className = {styles.headlineButton}> 
+				<button  className = {styles.headlineButton} onClick={goToTransition}> 
 					<p> Watch video </p>
 				</button> 
 			</div> 

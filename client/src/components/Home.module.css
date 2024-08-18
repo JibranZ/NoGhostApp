@@ -1,15 +1,20 @@
-/* Define color variables */
-:root {
-  --color1: #111720;
-  --color2: #1A2131;
-  --color3: #ecf0f1;
-  --color4: #2c3e50;
-  --containerWidth: 80%;
-  --borderWidth: 2px;
-  --textSize1: 18px;
-  --textSize2: 24px;
-  --brdRad1: 10px;
-  --fontFamily1: 'Montserrat', sans-serif;
+/* App.css holds 
+ * 		- color and size constants
+ * 		- main container class
+ * 		- main base class 
+ * 		*/
+
+
+/* navbar stuff */
+.navbar {
+	display: flex; 
+	min-height: 8vh;
+	max-height: 10%;
+	margin-bottom: 0;
+	width: var(--containerWidth);
+	flex-direction: row;
+	background-color: var(--color3); 
+	border-radius: var(--brdRad1) var(--brdRad1) 0 0;
 }
 
 
@@ -30,18 +35,6 @@
 	background-color: var(--color1);	
 	margin: 0;
 } 
-
-/* navbar stuff */
-.navbar {
-	display: flex; 
-	min-height: 8vh;
-	max-height: 10%;
-	margin-bottom: 0;
-	width: var(--containerWidth);
-	flex-direction: row;
-	background-color: var(--color3); 
-	border-radius: var(--brdRad1) var(--brdRad1) 0 0;
-}
 
 .navbarName {
 	/* border-left: var(--borderWidth) solid var(--color1); */ 
