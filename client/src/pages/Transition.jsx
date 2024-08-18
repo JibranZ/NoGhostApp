@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import tranStyle from './Transition.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Transition() {
   const [showQuestion, setShowQuestion] = useState(false);
@@ -15,10 +16,17 @@ function Transition() {
     { id: 3, text: "What kind of sports do you like?", answer: '' }
   ]);
 
+  const navigate = useNavigate();
+
+  const goToWaiting = () => {
+		navigate('/waiting'); 
+  };
+
   // Handle showing and hiding questions
   useEffect(() => {
     if (completed) {
       uploadAndTransition();
+	  goToWaiting();
     }
   }, [completed]);
 
