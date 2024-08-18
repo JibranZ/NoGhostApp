@@ -14,7 +14,6 @@ function WaitingScreen() {
 
   const [completed, setComplete] = useState(false);
 
-
   const navigate = useNavigate();
 
   const goToChat = () => {
@@ -30,16 +29,27 @@ function WaitingScreen() {
 
 
 	const handleConnect = async () => {
-        // Basic validation
-        // if (!username) {
-        //     setResponseMessage('Error -- username is required');
-        //     return;
-        // }
-		const username = "react";
+		const storedUser = localStorage.getItem('User');
+		const user = storedUser ? JSON.parse(storedUser) : null;
 
-        try {
+		if (!user) {
+		  console.error('No user data found in localStorage');
+		  return;
+		}
+		else {
+			console.log('User data found: ', user);
+		}
+
+		// get the user that is logged in 
+		const username = user.name || 'react'; // 
+		console.log(username);
+        
+		try {
+
+			// api can be seen in the queue folder 
             // Make the POST request to the /queueconnect endpoint
-            const response = await fetch('http://localhost:3019/queueconnect', {
+			// matches the user. 
+            const response = await fetch( 'http://3.144.147.251:3019/queueconnect', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -49,15 +59,21 @@ function WaitingScreen() {
 
             // Check if the response is ok (status code 200-299)
             if (response.ok) {
-                const result = await response.text(); // Read the response body as text
-                console.log (result); // Update state with success message
+                const result = await response.text(); 
+
+				// hanle returned user if she is there 
+                console.log (result); 
             } else {
-                const errorText = await response.text(); // Read the response body as text
-                console.log (`Error: ${errorText}`); // Update state with error message
+                const errorText = await response.text();
+                console.log (`Error: ${errorText}`); 
             }
         } catch (error) {
             console.error('Error connecting to the server:', error);
         }
+
+		// make listener later to see if anything changes in case no matches are found
+		// use this GET call: http://3.144.147.251:3019/checkmatch/sarah
+		// to see if sarah was matched. it will return who her match was 
 	}
  
 
