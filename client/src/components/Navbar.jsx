@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './Home.module.css'
-
+import { Link } from "react-router-dom";
 
 export default function Navbar () {
 	return (
@@ -15,12 +15,12 @@ export default function Navbar () {
 
 
 			<div className={` ${styles.navbarContents} `} > 
-	{/*
+			{/*
 			  <a href="#home" >Home</a>
 			  <a href="#about" >About</a>
 			  <a href="#services" >Services</a>
 			  <a href="#contact" >Contact</a>
-	*/}`
+			*/}`
 			</div> 
 
 
@@ -29,11 +29,15 @@ export default function Navbar () {
 
 			<div className={` ${styles.navbarLogin} `} > 
 				<button>
-					Login 
+					<Link to={"/login"} >
+						Login
+					</Link>
 				</button> 
 
 				<button>
-					Register	
+					<Link to={"/register"} >
+						Register
+					</Link>
 				</button> 
 			</div> 
 

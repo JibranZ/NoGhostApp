@@ -14,7 +14,6 @@ export default function Home () {
 			<Headline /> 
 			<Features /> 
 			<Footer /> 
-
 		</div> 
 
 	)
