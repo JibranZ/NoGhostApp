@@ -1,0 +1,120 @@
+body {
+  background-image: url("./assets/background-imge4.webp");
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Makes sure it covers the full viewport height */
+  margin: 0; /* Removes default body margin */
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  padding-top: 100px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid white;
+  padding: 50px;
+  border-radius: 20px;
+}
+input {
+  padding: 20px 30px;
+  border-radius: 25px; /* Rounded corners */
+  border: 2px solid lightblue;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(48, 207, 208, 1) 11.2%,
+    rgba(51, 8, 103, 1) 92.5%
+  );
+}
+
+input:hover {
+  border-color: #007bff; /* Changes border color on hover */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Adds a glow effect */
+}
+
+input:focus {
+  border-color: navy; /* Keeps the border color when focused */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* Enhances the glow effect */
+}
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 25px; /* Rounded corners */
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(48, 207, 208, 1) 11.2%,
+    rgba(51, 8, 103, 1) 92.5%
+  );
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 10px rgba(0, 86, 179, 0.5); /* Adds a subtle glow effect */
+}
+
+button:active {
+  background-color: #003d80; /* Even darker blue on click */
+}
+
+button:focus {
+  outline: none;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    blue,
+    violet
+  ); /* Gradient from purple to blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Ensures the gradient stays clipped to the text */
+  text-fill-color: transparent; /* Transparent text color to reveal the gradient */
+}
+
+label {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.navbar {
+  background-color: white;
+}
+
+.alert {
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: blue;
+  margin-top: 20px;
+  text-decoration: none;
+}

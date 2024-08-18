@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema(
     },
     password: { type: String, required: true, minLength: 3, maxLength: 1024 },
   },
+
   {
     timestamps: true,
   }
